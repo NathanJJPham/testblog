@@ -1,12 +1,14 @@
 <nav class="font-sans flex flex-col text-center sm:flex-row sm:text-left sm:justify-between py-4 px-6 bg-white shadow sm:items-baseline w-full">
   <div class="mb-2 sm:mb-0">
-    <a href="/home" class="text-2xl no-underline text-grey-darkest hover:text-blue-dark">Home</a>
+    <a href="/home" class="text-2xl no-underline text-grey-darkest hover:text-blue-dark"><%= link_to "Zip Tennis", home_index_path%></a>
+    <a href="/home" class="text-2xl no-underline text-grey-darkest hover:text-blue-dark"><%= link_to "Search for Player", home_index_path%></a>
+
   </div>
   <div>
-    <a href="/one" class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">Login</a>
-    <a href="/two" class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">Sign Up</a>
-    <a href="/three" class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">Sign Out</a>
-    <a href="/three" class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">Play</a>
+    <a href="/one" class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2"><%= link_to "Sign in", new_user_session_path%></a>
+    <a href="/two" class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2"><%= link_to "Sign Up", new_user_registration_path%></a>
+    <a href="/three" class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2"><%= link_to "Sign Out", destroy_user_session_path, method: :delete%></a>
+    <a href="/three" class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2"><%= link_to "Edit Profile", edit_user_registration_path%></a>
 
   </div>
 </nav>
